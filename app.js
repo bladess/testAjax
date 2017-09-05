@@ -29,3 +29,19 @@ $("#trois").html('<iframe src="https://giphy.com/embed/3o7bu8sRnYpTOG1p8k" class
 
 });
 
+$("#subm").on("click",function(){
+    $.ajax({
+        url:"http://api.openweathermap.org/data/2.5/weather",
+        type: 'GET',
+        data : "q="+$("#tamere").val()+"&APPID=8e625c3c868e484db57a6f15f5fb5f19",
+        success: function(data){    
+            $("#trois").html("<img src ='http://openweathermap.org/img/w/"+data.weather[0].icon+".png' />"+(data.main.temp-273.15));
+        },
+        error: function(){
+            console.log("error meteo");
+        }
+
+    })
+
+
+})

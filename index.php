@@ -9,8 +9,9 @@
 </head>
 <body>
     <div>
+            <input type="text" id="tamere">
             <button id="sub">It's a button</button>
-       
+            <button id="subm">It's a button</button>
     </div>
     <span id="trois"></span>
     <script src="node_modules/jquery/dist/jquery.js"></script>
